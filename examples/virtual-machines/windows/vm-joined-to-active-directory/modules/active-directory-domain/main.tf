@@ -14,7 +14,7 @@ resource "azurerm_windows_virtual_machine" "domain-controller" {
   name                = local.virtual_machine_name
   resource_group_name = var.resource_group_name
   location            = var.location
-  size                = "Standard_F2"
+  size                = "Standard_F2s"
   admin_username      = var.admin_username
   admin_password      = var.admin_password
   custom_data         = local.custom_data
@@ -31,7 +31,7 @@ resource "azurerm_windows_virtual_machine" "domain-controller" {
   source_image_reference {
     publisher = "MicrosoftWindowsServer"
     offer     = "WindowsServer"
-    sku       = "2016-Datacenter"
+    sku       = "2022-datacenter-core-g2"
     version   = "latest"
   }
 

@@ -19,13 +19,16 @@ variable "active_directory_domain" {
 }
 
 variable "active_directory_netbios_name" {
+  default =["hodge-home"]
   description = "The netbios name of the Active Directory domain, for example `consoto`"
 }
 
 variable "admin_username" {
+  default = ["hodge_admin"]
   description = "The username associated with the local administrator account on the virtual machine"
 }
 
 variable "admin_password" {
+  default = ["T!nkitten006883"]
   description = "The password associated with the local administrator account on the virtual machine"
 }
